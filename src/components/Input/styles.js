@@ -10,7 +10,7 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.COLORS.DARK_900};
 
   margin-bottom: .8rem;
-  border-radius: 1rem;
+  border-radius: .8rem;
 
 
   > svg{
@@ -32,7 +32,14 @@ export const Container = styled.div`
 
     & ::placeholder{
       color:${({ theme }) => theme.COLORS.LIGHT_500};
+     
     }
+  }
+
+
+  :focus{
+    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_400};
+    border-radius: .8rem;
   }
 
 `;
