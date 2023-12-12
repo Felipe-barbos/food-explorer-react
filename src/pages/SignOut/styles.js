@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div`
   height: 100vh;
@@ -23,30 +24,33 @@ export const Container = styled.div`
     }
   }
 
-  .inputWrapper{
-    display: flex;
+  
+
+  @media (max-width:${DEVICE_BREAKPOINTS.MD} ){
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
 
-    p{
-      font-size: 1.6rem;
-      color: ${({ theme }) => theme.COLORS.WHITE};
+
+    h1{
+      font-size: 3rem;
+
     }
-
   }
+
 `;
 
 
 export const Form = styled.form`
 
   padding: 6.4rem;
-  width: 50rem;
+  width: 60rem;
   background: ${({ theme }) => theme.COLORS.DARK_700};
 
   display: flex;
 
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 
   border-radius: 1.6rem;
 
@@ -56,6 +60,21 @@ export const Form = styled.form`
     align-self: center;
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-family: 'Poppins';
+  }
+
+
+  .inputWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    p{
+      font-size: 2rem;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+
+
+   
   }
 
   p{
@@ -71,6 +90,41 @@ export const Form = styled.form`
     font-weight: 500;
     line-height: 2.4rem;
 
+  }
+
+  @media(max-width: ${DEVICE_BREAKPOINTS.MD}){
+    width: 30rem;
+    gap: 1rem;
+
+    background: none;
+    padding: .5rem;
+
+    h2{
+    font-size: 2rem;
+    display: none;
+    }
+
+    .inputWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    p{
+      font-size: 1.4rem;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+
+
+   
+  }
+
+
+    a{
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
+
+    
   }
 
   

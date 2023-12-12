@@ -18,13 +18,15 @@ export const Container = styled.div`
   }
 
   > input {
-    height: 5.6rem;
+    height: 5rem;
     width: 100%;
 
     padding: 1.2rem;
 
     color: ${({ theme }) => theme.COLORS.LIGHT_400};
+    font-size: 1.6rem;
     background: transparent;
+
 
     border: 0;
     outline: 0;
@@ -32,6 +34,7 @@ export const Container = styled.div`
 
     & ::placeholder{
       color:${({ theme }) => theme.COLORS.LIGHT_500};
+      font-size: 1.6rem;
      
     }
   }

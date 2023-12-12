@@ -13,7 +13,6 @@ export default createGlobalStyle`
   font-size: 62.5%;
 }
 
-
 body{
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_400};
   color: ${({ theme }) => theme.COLORS.LIGHT_400};
@@ -25,7 +24,7 @@ body{
 
 body, input, button, textarea {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 a{
