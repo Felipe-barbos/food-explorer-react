@@ -3,6 +3,7 @@ import { FiLogIn, FiMail, FiLock } from "react-icons/fi"
 import backgroundImg from "../../assets/Icon.svg";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
+import { Card } from "../../components/Card";
 
 
 export function SignOut() {
@@ -47,6 +48,9 @@ export function SignOut() {
         />
 
         <a>Já tenho uma conta</a>
+
+
+
 
       </Form>
     </Container>
