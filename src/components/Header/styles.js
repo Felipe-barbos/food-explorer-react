@@ -4,9 +4,12 @@ import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.header`
 
+width: 100vw;
+grid-area: header;
 display: flex;
 align-items: flex-start;
 justify-content: space-between;
+height: 5rem;
 padding: 1rem;
 
 

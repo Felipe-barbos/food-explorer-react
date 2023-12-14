@@ -3,17 +3,16 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-
-  width: 21rem;
-  height: 29rem;
-
+  height: 27rem;
   padding: 2.4rem;
   display:flex;
+  flex-shrink: 0;
 
   gap: 1.2rem;
   flex-direction: column;
   justify-content: center;
   border-radius: .8rem;
+
 
   background: ${({ theme }) => theme.COLORS.DARK_200};
 
