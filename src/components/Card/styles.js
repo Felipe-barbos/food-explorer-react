@@ -11,6 +11,7 @@ export const Container = styled.div`
   gap: 1.2rem;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: .8rem;
 
 

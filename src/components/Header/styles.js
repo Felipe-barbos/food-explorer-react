@@ -12,6 +12,8 @@ justify-content: space-between;
 height: 5rem;
 padding: 1rem;
 
+position: fixed;
+
 
 background: ${({ theme }) => theme.COLORS.DARK_700};
 

@@ -1,10 +1,11 @@
 import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Card } from "../../components/Card";
-import { Container, Content } from "./styles";
+import { Container, Content, ListCard, Panel } from "./styles";
 
 import imagePrato from "../../assets/imgPratos/Imagens - Food Explorer-v2/Mask group-1.png";
-
+import imagePanel from "../../assets/IconPanel.svg";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
@@ -12,43 +13,98 @@ export function Home() {
     <Container >
       <Header />
 
+
+
       <Content>
 
+        <Panel>
 
-        <Section title="Refeições">
-
-          <div className="elements">
-
-
-            <Card
-              title="Prato Delicioso"
-              src={imagePrato}
-              price="15.90"
-
-            />
-            <Card
-              title="Prato Delicioso"
-              src={imagePrato}
-              price="15.90"
-
-            />
-            <Card
-              title="Prato Delicioso"
-              src={imagePrato}
-              price="15.90"
-
-            />
-            <Card
-              title="Prato Delicioso"
-              src={imagePrato}
-              price="15.90"
-
-            />
-
+          <img src={imagePanel} alt="" />
+          <div className="textPanel">
+            <h2>Sabores inigualáveis</h2>
+            <p>Sinta o cuidado do preparo com ingredientes selecionados</p>
           </div>
+        </Panel>
 
-        </Section>
+
+        <div className="listSection">
+
+
+
+          <Section title="Refeições">
+
+            <ListCard>
+
+
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+
+            </ListCard>
+
+          </Section>
+
+          <Section title="Pratos principais">
+            <ListCard>
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+              <Card
+                title="Prato Delicioso"
+                src={imagePrato}
+                price="15.90"
+
+              />
+            </ListCard>
+          </Section>
+
+
+        </div>
       </Content>
+
+      <Footer />
     </Container>
   );
 }
