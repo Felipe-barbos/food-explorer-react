@@ -27,6 +27,7 @@ body, input, button, textarea {
   font-size: 2rem;
 }
 
+
 a{
   text-decoration: none;
 }
