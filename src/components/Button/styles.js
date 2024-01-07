@@ -12,10 +12,15 @@ export const Container = styled.button`
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2.4rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
   border: none;
   border-radius: 1rem;
+
+
 
 
   &:disabled{

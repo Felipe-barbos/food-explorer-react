@@ -6,12 +6,23 @@ import { Container, Content, ListCard, Panel } from "./styles";
 import imagePrato from "../../assets/imgPratos/Imagens - Food Explorer-v2/Mask group-1.png";
 import imagePanel from "../../assets/IconPanel.svg";
 import { Footer } from "../../components/Footer";
+import { useState } from "react";
+import { SideMenu } from "../../components/SideMenu";
 
 export function Home() {
+
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
 
     <Container >
-      <Header />
+      <SideMenu
+      menuIsOpen={menuIsOpen}
+      onCloseMenu={() => setMenuIsOpen(false)}
+      />
+
+      <Header
+        onOpenMenu={() => setMenuIsOpen(true)}
+       />
 
 
 

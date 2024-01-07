@@ -13,8 +13,11 @@ export const Container = styled.div`
   border-radius: .8rem;
 
 
-  > svg{
-    margin: 1.6rem;
+   svg{
+    margin-left: 1rem;
+    font-size: 2.4rem;
+
+    color: ${({theme}) => theme.COLORS.WHITE};
   }
 
   > input {
@@ -40,9 +43,6 @@ export const Container = styled.div`
   }
 
 
-  :focus{
-    border: 1px solid ${({ theme }) => theme.COLORS.LIGHT_400};
-    border-radius: .8rem;
-  }
+
 
 `;

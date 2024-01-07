@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+import {DEVICE_BREAKPOINTS} from "../../styles/deviceBreakpoints";
+
 
 
 export const Container = styled.div`
-  height: 27rem;
-  padding: 2.4rem;
+  width:22rem;
+  height: 35rem;
+  padding: 1.5rem;
   display:flex;
   flex-shrink: 0;
 
-  gap: 1.2rem;
+  gap: .8rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -17,10 +20,16 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme.COLORS.DARK_200};
 
+ > svg{
+  font-size: 2.5rem;
+  color: ${({theme}) => theme.COLORS.WHITE};
+  align-self: flex-end;
+ }
+
 
   img{
-    width: 12rem;
-    height: 12rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 50%;
 
     align-self: center;
@@ -39,6 +48,7 @@ export const Container = styled.div`
  a{
   color: ${({ theme }) => theme.COLORS.BLUE_100};
   font-family: "roboto";
+
   font-weight: 400;
   font-size: 1.8rem;
 
@@ -46,7 +56,67 @@ export const Container = styled.div`
  }
 
 
+ span{
+  display: flex;
+  flex-direction: row;
+  gap: 1.4rem;
+  align-items: center;
 
+
+  color: ${({theme}) => theme.COLORS.WHITE};
+
+  
+ }
+
+ .PanelButtons{
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+ }
+
+ #description{
+  display: none;
+ }
+
+
+
+
+ @media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+  width: 30rem;
+  height: 46rem;
+  gap: 1.5rem;
+  align-items: center;
+
+  img{
+    width: 18rem;
+    height: 18rem;
+  }
+
+  p{
+    font-size: 2.4rem;
+    font-weight: bold;
+
+  }
+
+  a{
+    font-size: 3.2rem;
+  }
+
+
+  .PanelButtons{
+    width: 20rem;
+    flex-direction: row;
+
+  }
+
+
+
+
+
+
+ }
 
 
 `;

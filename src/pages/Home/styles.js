@@ -30,19 +30,9 @@ overflow-y: auto;
 padding-top: 3rem;
 
 
-
-
-
-
-height: 100vh;
-
-
-
-
-
-
-
-
+@media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+  padding: 5rem 12rem 5rem 12rem;
+}
 
 
 `;
@@ -56,6 +46,15 @@ export const ListCard = styled.div`
   gap: 1rem;
 
   overflow-x: auto;
+
+
+
+
+  @media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+    gap: 2.5rem;
+  }
+
+  
 
 
 `;
@@ -107,6 +106,46 @@ export const Panel = styled.div`
 
       color:${({ theme }) => theme.COLORS.LIGHT_300};
     }
+  }
+
+
+  @media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+    margin: 19rem 4rem 4rem 5rem;
+    height: 26rem;
+
+
+    img{
+      width: 62rem;
+      height: 40rem;
+      margin-left: -9rem;
+      margin-bottom: 14rem;
+    }
+
+
+
+    
+   padding: 0;
+
+ 
+
+
+   .textPanel{
+
+    width: 80rem;
+    margin-right: -20rem;
+  
+   h2{
+    font-size: 4rem;
+    font-weight: 400;
+   }
+
+   p{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    
+   }
+
+  }
   }
 
 `;

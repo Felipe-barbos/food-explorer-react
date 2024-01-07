@@ -1,4 +1,4 @@
-
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 import styled from "styled-components";
 
@@ -14,4 +14,8 @@ export const Container = styled.span`
   border-radius: .8rem;
 
   padding: 0.5rem 1.6rem;
+
+  @media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+    font-size: 2rem;
+  }
 `;

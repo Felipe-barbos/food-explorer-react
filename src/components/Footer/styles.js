@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 
 export const Container = styled.footer`
@@ -33,4 +34,19 @@ h1,a {
   gap: 1rem;
 }
 
+
+@media(min-width: ${DEVICE_BREAKPOINTS.LG}){
+  padding: 3rem;
+  justify-content: space-between;
+
+
+  >h1{
+    font-size: 2.4rem;
+  }
+
+  >a{
+    font-size: 1.6rem;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
+}
 `;
