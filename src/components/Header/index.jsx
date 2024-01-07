@@ -3,9 +3,12 @@ import { List, Receipt, MagnifyingGlass, SignOut } from "@phosphor-icons/react";
 import { Input } from "../Input";
 import backgroundImg from "../../assets/Icon.svg";
 import { Button } from "../Button";
-
+import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 
 export function Header({ onOpenMenu }) {
+  const {signOut} = useAuth();
+
   return (
     <Container >
 
@@ -32,7 +35,8 @@ export function Header({ onOpenMenu }) {
         Pedidos
         </button>
 
-        <SignOut/>
+        <Link to="/" onClick={signOut}><SignOut/></Link>
+        
       </div>
     
   

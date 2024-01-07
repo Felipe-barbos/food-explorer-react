@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 
 export const Container = styled.aside`
@@ -74,4 +75,19 @@ export const Button = styled.button`
   font-size: 2.5rem;
   color: ${({theme}) => theme.COLORS.LIGHT_300};
  }
+`;
+
+export const Out = styled.li`
+  padding: .4rem;
+  list-style-type: none;
+  font-size: 2.4rem;
+  font-family: Poppins;
+  font-weight: 300;
+  color: ${({theme}) => theme.COLORS.LIGHT_300};
+
+  border-bottom: 1px solid ${({theme}) => theme.COLORS.DARK_1000};
+
+  :hover{
+   filter: brightness(0.8);
+  }
 `;

@@ -1,9 +1,15 @@
-import { Container, Button } from "./styles";
+import { Container, Button, Out } from "./styles";
 import {Input} from "../Input";
 
+import { Link, useNavigate } from "react-router-dom";
+
 import {MagnifyingGlass, X} from '@phosphor-icons/react'
+import { useAuth } from "../../hooks/auth";
 
 export function SideMenu({menuIsOpen, onCloseMenu}){
+
+const {signOut} = useAuth();
+
  return(
   <Container data-menu-is-open={menuIsOpen}>
 
@@ -20,7 +26,7 @@ export function SideMenu({menuIsOpen, onCloseMenu}){
    <ul>
        <li>Novo Prato</li>
         
-       <li>Sair</li>
+       <Out to="/" onClick={signOut}>Sair</Out>
    </ul>
   </Container>
  )
