@@ -54,7 +54,7 @@ overflow-y: auto;
   >img{
   width: 26rem;
   height: 26rem;
-
+  border-radius: 50%;
   align-self: center;
 
   

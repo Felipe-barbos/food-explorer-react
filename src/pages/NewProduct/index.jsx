@@ -6,7 +6,7 @@ import { Input } from "../../components/Input";
 import { Container, Form, IngredientsList } from "./styles";
 
 
-export function NewDish() {
+export function NewProduct() {
   return (
 
     <Container>

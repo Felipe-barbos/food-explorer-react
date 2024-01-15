@@ -20,12 +20,20 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme.COLORS.DARK_200};
 
- > svg{
+ > .IconPanel{
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  
+  svg{
   font-size: 2.5rem;
   color: ${({theme}) => theme.COLORS.WHITE};
   align-self: flex-end;
  }
 
+ } 
 
   img{
     width: 13rem;
@@ -36,11 +44,13 @@ export const Container = styled.div`
   }
 
  p{
+
   color: ${({ theme }) => theme.COLORS.LIGHT_300};
   align-self: center;
 
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 500;
+  max-height: 3rem;
 
   font-family: "poppins";
  }

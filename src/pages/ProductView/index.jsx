@@ -7,23 +7,67 @@ import imagePrato from "../../assets/imgPratos/Imagens - Food Explorer-v2/Mask g
 import { ContItems } from "../../components/ContItems";
 import { Tag } from "../../components/Tags";
 
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 
-export function DishView({ src, price, title }) {
+
+export function ProductView() {
+
+  const navigate = useNavigate();
+
+  const params = useParams();
+
+  const [data, setData] = useState({});
+  
+  const [avatar, setAvatar] = useState("");
+
+ 
+
+
+
+  function handleBack(){
+    navigate(-1);
+  }
+
+
+
+  useEffect(() => {
+    async function fetchProduct(){
+      const response = await api.get(`/products/${params.product_id}`);
+      
+      const avatarUrl = `${api.defaults.baseURL}/files/${response.data.avatar}`
+      setData(response.data);
+      setAvatar(avatarUrl);
+      
+    }
+
+    
+
+    fetchProduct();
+
+
+
+
+
+  },[]);
+
+
   return (
     <Container>
 
       <Header />
 
       <Content>
-        <a> <CaretLeft />voltar</a>
+        <a onClick={() => handleBack()} > <CaretLeft />voltar</a>
 
 
         <div className="panelDescription">
-          <img src={imagePrato} alt="" />
+          <img src={avatar} alt="" />
 
           <div className="descriptions">
-            <h2>Prato Delicioso</h2>
-            <p>Rabanetes, folhas verde e molho agridoce salpicados com gergelim.</p>
+            <h2>{data.name}</h2>
+            <p>{data.description}</p>
 
             <div className="tags">
               <Tag
@@ -43,7 +87,7 @@ export function DishView({ src, price, title }) {
               <ContItems />
 
               <Button>
-                <Receipt /> pedir - R$ 25,00
+                <Receipt /> pedir - R$ {data.price}
               </Button>
             </div>
           </div>
