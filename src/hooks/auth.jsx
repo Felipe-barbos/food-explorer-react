@@ -10,6 +10,7 @@ function AuthProvider({children}){
 
 
   const [data, setData] = useState({});
+  const [card, setCard] = useState({});
 
   async function signIn({email, password}){
 
@@ -64,11 +65,17 @@ function AuthProvider({children}){
 
   }, []);
 
+
+
+  function addProductInCard({product_id, count}){
+    console.log({product_id, count});
+  }
+
  
 
 
   return(
-   <AuthContext.Provider value={{signIn, user: data.user, signOut}}>
+   <AuthContext.Provider value={{signIn, user: data.user, signOut, addProductInCard}}>
     {children}
    </AuthContext.Provider>
   )
