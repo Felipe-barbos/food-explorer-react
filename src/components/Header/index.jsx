@@ -41,8 +41,11 @@ export function Header({ onOpenMenu }) {
     
   
 
-      <Menu>
+      <Menu to="/cart">
+       
+        
         <Receipt />
+       
       </Menu>
 
 

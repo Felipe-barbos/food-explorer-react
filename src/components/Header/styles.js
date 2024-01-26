@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
+import { Link } from "react-router-dom";
 
 
 export const Container = styled.header`
@@ -118,7 +119,7 @@ div {
 `;
 
 
-export const Menu = styled.button`
+export const Menu = styled(Link)`
   background: none;
   border:none;
 
